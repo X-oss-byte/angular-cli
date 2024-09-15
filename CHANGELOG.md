@@ -1,38 +1,79 @@
-<a name="16.2.0-next.2"></a>
+<a name="16.2.0"></a>
 
-# 16.2.0-next.2 (2023-07-13)
-
-### @angular/cli
-
-| Commit                                                                                              | Type | Description                                       |
-| --------------------------------------------------------------------------------------------------- | ---- | ------------------------------------------------- |
-| [d0f005913](https://github.com/angular/angular-cli/commit/d0f005913f830c13df0acbb0753fc10ff207ca35) | fix  | add `zone.js` to `ng version` output              |
-| [da3c1c32a](https://github.com/angular/angular-cli/commit/da3c1c32ae91d7247c61aa050e6707109626082a) | fix  | throw an error when executed in a google3-context |
+# 16.2.0 (2023-08-09)
 
 ### @angular-devkit/build-angular
 
 | Commit                                                                                              | Type | Description                                                                     |
 | --------------------------------------------------------------------------------------------------- | ---- | ------------------------------------------------------------------------------- |
 | [e6b377436](https://github.com/angular/angular-cli/commit/e6b377436a471073657dc35e7c7a28db6688760a) | feat | add `ssr` option in application builder                                         |
+| [c05c83be7](https://github.com/angular/angular-cli/commit/c05c83be7c6c8bcdad4be8686a6e0701a55304cc) | feat | add initial application builder implementation                                  |
+| [095f5aba6](https://github.com/angular/angular-cli/commit/095f5aba60a4c1267a87b8b3ae38dbfbf70731f1) | feat | add initial support for server bundle generation using esbuild                  |
 | [cb165a75d](https://github.com/angular/angular-cli/commit/cb165a75dc8c21ead537684a092ed50d3736e04a) | feat | add pre-rendering (SSG) and App-shell support generation to application builder |
+| [2a3fc6846](https://github.com/angular/angular-cli/commit/2a3fc68460152a48758b9353bff48193641861c5) | feat | add preload hints based on transitive initial files                             |
 | [099cec758](https://github.com/angular/angular-cli/commit/099cec758ad671c7fd0ca2058a271e4fe181a44d) | feat | add support for serving SSR with dev-server when using the application builder  |
+| [449e21b3a](https://github.com/angular/angular-cli/commit/449e21b3a6da990a5865bb5bdfb8145794f40cf9) | fix  | correctly load dev server assets with vite 4.4.0+                               |
+| [f42f10135](https://github.com/angular/angular-cli/commit/f42f10135c1e2184a9080b726dc5e41669937b13) | fix  | ensure preload hints for external stylesheets are marked as styles              |
 | [7defb3635](https://github.com/angular/angular-cli/commit/7defb3635c89737d151c9537bd7becd463098434) | fix  | ensure that server dependencies are loaded also in ssr entrypoint               |
+| [05f31bd28](https://github.com/angular/angular-cli/commit/05f31bd28f002a232598e0468dc418f99e434ae0) | fix  | prevent race condition in setting up sass worker pool                           |
+| [5048f6e82](https://github.com/angular/angular-cli/commit/5048f6e82e299b0733f34cbdcb1e7b1ef9a63210) | fix  | Set chunk names explicitly                                                      |
 | [974748cdf](https://github.com/angular/angular-cli/commit/974748cdf894c5ad0451e3fdf1c186bdad80878b) | perf | filter postcss usage based on content in esbuild builder                        |
+| [61a652d91](https://github.com/angular/angular-cli/commit/61a652d91274f4adce20182e630fe9963b4ceddd) | perf | inject Sass import/use directive importer information when resolving            |
 | [a0a2c7aef](https://github.com/angular/angular-cli/commit/a0a2c7aef675f8aae294d2119f721c4345d633b0) | perf | only load browserslist in babel preset if needed                                |
+| [6bfd1800e](https://github.com/angular/angular-cli/commit/6bfd1800efa2bf41126696b66938bdf291ad5455) | perf | use in-memory Sass module resolution cache                                      |
 
 <!-- CHANGELOG SPLIT MARKER -->
 
-<a name="16.2.0-next.1"></a>
+<a name="16.1.8"></a>
 
-# 16.2.0-next.1 (2023-07-06)
+# 16.1.8 (2023-08-04)
+
+| Commit                                                                                              | Type | Description            |
+| --------------------------------------------------------------------------------------------------- | ---- | ---------------------- |
+| [7a420d338](https://github.com/angular/angular-cli/commit/7a420d3382b21d24c73b722e849f01b0aacfb860) | fix  | build: update critters |
+
+<!-- CHANGELOG SPLIT MARKER -->
+
+<a name="16.1.7"></a>
+
+# 16.1.7 (2023-08-02)
 
 ### @angular-devkit/build-angular
 
-| Commit                                                                                              | Type | Description                                                    |
-| --------------------------------------------------------------------------------------------------- | ---- | -------------------------------------------------------------- |
-| [095f5aba6](https://github.com/angular/angular-cli/commit/095f5aba60a4c1267a87b8b3ae38dbfbf70731f1) | feat | add initial support for server bundle generation using esbuild |
-| [93b743af0](https://github.com/angular/angular-cli/commit/93b743af00511fc4cc7808004a0afe0c2b3c8b05) | fix  | normalize paths in loader cache with esbuild                   |
-| [376e3462d](https://github.com/angular/angular-cli/commit/376e3462d3a2204a412c1d3e4551c20ae6b61aaf) | fix  | use absolute watch paths for postcss dependency messages       |
+| Commit                                                                                              | Type | Description                            |
+| --------------------------------------------------------------------------------------------------- | ---- | -------------------------------------- |
+| [1dab4ed87](https://github.com/angular/angular-cli/commit/1dab4ed8738b42d6b93298889caf1546b011706f) | fix  | hot update filename suffix with `.mjs` |
+
+<!-- CHANGELOG SPLIT MARKER -->
+
+<a name="16.1.6"></a>
+
+# 16.1.6 (2023-07-26)
+
+### @angular-devkit/build-angular
+
+| Commit                                                                                              | Type | Description                                                 |
+| --------------------------------------------------------------------------------------------------- | ---- | ----------------------------------------------------------- |
+| [20816b57f](https://github.com/angular/angular-cli/commit/20816b57f16b0bcbd5b81f06f6f790e4485c1daa) | fix  | error during critical CSS inlining for external stylesheets |
+
+<!-- CHANGELOG SPLIT MARKER -->
+
+<a name="16.1.5"></a>
+
+# 16.1.5 (2023-07-20)
+
+### @angular/cli
+
+| Commit                                                                                              | Type | Description                                       |
+| --------------------------------------------------------------------------------------------------- | ---- | ------------------------------------------------- |
+| [7e91d4709](https://github.com/angular/angular-cli/commit/7e91d4709966c592c271ff8d3456ce569156e2e5) | fix  | add `zone.js` to `ng version` output              |
+| [475506822](https://github.com/angular/angular-cli/commit/475506822b148c8e2597c60653238a40140bacb0) | fix  | throw an error when executed in a google3-context |
+
+### @angular-devkit/build-angular
+
+| Commit                                                                                              | Type | Description                                            |
+| --------------------------------------------------------------------------------------------------- | ---- | ------------------------------------------------------ |
+| [07d3d8c6a](https://github.com/angular/angular-cli/commit/07d3d8c6ae01212de866fac769ff2da888d5adea) | fix  | correctly wrap CommonJS exported enums when optimizing |
 
 <!-- CHANGELOG SPLIT MARKER -->
 
@@ -69,20 +110,6 @@
 | Commit                                                                                              | Type | Description                                |
 | --------------------------------------------------------------------------------------------------- | ---- | ------------------------------------------ |
 | [f36e38a91](https://github.com/angular/angular-cli/commit/f36e38a913b454ec340d6bf2311391c5df1cee24) | fix  | update direct semver dependencies to 7.5.3 |
-
-<!-- CHANGELOG SPLIT MARKER -->
-
-<a name="16.2.0-next.0"></a>
-
-# 16.2.0-next.0 (2023-06-28)
-
-### @angular-devkit/build-angular
-
-| Commit                                                                                              | Type | Description                                                        |
-| --------------------------------------------------------------------------------------------------- | ---- | ------------------------------------------------------------------ |
-| [c05c83be7](https://github.com/angular/angular-cli/commit/c05c83be7c6c8bcdad4be8686a6e0701a55304cc) | feat | add initial application builder implementation                     |
-| [2a3fc6846](https://github.com/angular/angular-cli/commit/2a3fc68460152a48758b9353bff48193641861c5) | feat | add preload hints based on transitive initial files                |
-| [f42f10135](https://github.com/angular/angular-cli/commit/f42f10135c1e2184a9080b726dc5e41669937b13) | fix  | ensure preload hints for external stylesheets are marked as styles |
 
 <!-- CHANGELOG SPLIT MARKER -->
 
@@ -3488,7 +3515,7 @@ Alan Agius, Charles Lyding, Joey Perrott, LeonEck and Mike Jancar
 
   <td>
 <a href="https://github.com/angular/angular-cli/commit/8383c6b421f7005a25a3bff0826048f3a24f3030"><img
-   align="top"
+   style="vertical-align: top"
    title="Bug Fix" src="https://img.shields.io/badge/8383c6b-fix-green.svg" />
 </a>
   </td>
@@ -3507,7 +3534,7 @@ Alan Agius, Charles Lyding, Joey Perrott, LeonEck and Mike Jancar
 
   <td>
 <a href="https://github.com/angular/angular-cli/commit/07763702fd244ba44aebb714a295dbf5ba72b91d"><img
-   align="top"
+   style="vertical-align: top"
    title="Bug Fix" src="https://img.shields.io/badge/0776370-fix-green.svg" />
 </a>
   </td>
@@ -3526,7 +3553,7 @@ Alan Agius, Charles Lyding, Joey Perrott, LeonEck and Mike Jancar
 
   <td>
 <a href="https://github.com/angular/angular-cli/commit/a5c69722ffeceb72dcd46901c2bb983e5dc8bf32"><img
-   align="top"
+   style="vertical-align: top"
    title="Bug Fix" src="https://img.shields.io/badge/a5c6972-fix-green.svg" />
 </a>
   </td>
@@ -3541,7 +3568,7 @@ Alan Agius, Charles Lyding, Joey Perrott, LeonEck and Mike Jancar
 
   <td>
 <a href="https://github.com/angular/angular-cli/commit/c65b049996a8de9d9fcc66631872424cbe5f13f9"><img
-   align="top"
+   style="vertical-align: top"
    title="Bug Fix" src="https://img.shields.io/badge/c65b049-fix-green.svg" />
 </a>
   </td>
@@ -3556,7 +3583,7 @@ Alan Agius, Charles Lyding, Joey Perrott, LeonEck and Mike Jancar
 
   <td>
 <a href="https://github.com/angular/angular-cli/commit/3d71c63b3a11946ebfca3f0d97d4fbf8dca16255"><img
-   align="top"
+   style="vertical-align: top"
    title="Bug Fix" src="https://img.shields.io/badge/3d71c63-fix-green.svg" />
 </a>
   </td>
@@ -3575,7 +3602,7 @@ Alan Agius, Charles Lyding, Joey Perrott, LeonEck and Mike Jancar
 
   <td>
 <a href="https://github.com/angular/angular-cli/commit/9a04975a2170c3ecc2c09c32bd15a89c613e198f"><img
-   align="top"
+   style="vertical-align: top"
    title="Bug Fix" src="https://img.shields.io/badge/9a04975-fix-green.svg" />
 </a>
   </td>
@@ -3590,7 +3617,7 @@ Alan Agius, Charles Lyding, Joey Perrott, LeonEck and Mike Jancar
 
   <td>
 <a href="https://github.com/angular/angular-cli/commit/2ac8e9c0e131bf7fcb2c6e92500eeaa112efcefb"><img
-   align="top"
+   style="vertical-align: top"
    title="Bug Fix" src="https://img.shields.io/badge/2ac8e9c-fix-green.svg" />
 </a>
   </td>
